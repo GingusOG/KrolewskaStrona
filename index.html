@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oferta Pracy</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+<header>
+  <h1>FirmaTech Sp. z o.o.</h1>
+  <p>Oferty pracy &mdash; Dołącz do naszego zespołu</p>
+</header>
+
+<nav>
+  <a href="#oferty">Oferty pracy</a>
+  <a href="#ofirmie">O firmie</a>
+  <a href="#benefity">Benefity</a>
+  <a href="#formularz">Aplikuj</a>
+</nav>
+
+<div class="container">
+
+  <!-- OFERTY -->
+  <section id="oferty">
+    <h2>Aktualne oferty pracy</h2>
+    <div class="oferty">
+
+      <div class="oferta-box">
+        <h3>Programista stron internetowych</h3>
+        <p><strong>Dział:</strong> IT</p>
+        <p><strong>Tryb:</strong> Zdalna / Bydgoszcz</p>
+        <p>Tworzenie i utrzymanie stron www. Znajomość HTML, CSS, JavaScript. Mile widziane PHP.</p>
+        <p class="wynagrodzenie">Wynagrodzenie: 6 000 &ndash; 10 000 zł brutto</p>
+      </div>
+
+      <div class="oferta-box">
+        <h3>Specjalista ds. sieci komputerowych</h3>
+        <p><strong>Dział:</strong> Infrastruktura</p>
+        <p><strong>Tryb:</strong> Stacjonarna</p>
+        <p>Konfiguracja i utrzymanie sieci LAN/WAN. Wymagane certyfikaty Cisco lub CompTIA.</p>
+        <p class="wynagrodzenie">Wynagrodzenie: 7 000 &ndash; 12 000 zł brutto</p>
+      </div>
+
+      <div class="oferta-box">
+        <h3>Administrator systemu Windows</h3>
+        <p><strong>Dział:</strong> IT</p>
+        <p><strong>Tryb:</strong> Stacjonarna / Hybrydowa</p>
+        <p>Zarządzanie Active Directory, obsługa serwerów Windows Server 2019/2022.</p>
+        <p class="wynagrodzenie">Wynagrodzenie: 6 500 &ndash; 9 000 zł brutto</p>
+      </div>
+
+      <div class="oferta-box">
+        <h3>Grafik komputerowy</h3>
+        <p><strong>Dział:</strong> Marketing</p>
+        <p><strong>Tryb:</strong> Zdalna</p>
+        <p>Tworzenie materiałów graficznych, banerów i postów. Znajomość Photoshopa i CorelDraw.</p>
+        <p class="wynagrodzenie">Wynagrodzenie: 4 500 &ndash; 7 000 zł brutto</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- O FIRMIE -->
+  <section id="ofirmie">
+    <h2>O firmie</h2>
+    <div class="o-firmie">
+      <p>
+        FirmaTech Sp. z o.o. działa na rynku IT od 2010 roku. Zajmujemy się tworzeniem oprogramowania,
+        administracją sieci oraz wsparciem technicznym dla firm z całej Polski. Nasz zespół liczy ponad
+        80 pracowników w biurach w Bydgoszczy i Warszawie.
+      </p>
+      <p>
+        Stawiamy na rozwój pracowników i przyjazną atmosferę w pracy. Jeśli chcesz rozwijać się
+        w branży IT &mdash; to jest miejsce dla Ciebie.
+      </p>
+    </div>
+  </section>
+
+  <!-- BENEFITY -->
+  <section id="benefity" class="benefity">
+    <h2>Co oferujemy?</h2>
+    <ul>
+      <li>&#10003; Prywatna opieka medyczna</li>
+      <li>&#10003; Karta sportowa MultiSport</li>
+      <li>&#10003; Praca zdalna lub hybrydowa</li>
+      <li>&#10003; Dofinansowanie kursów i szkoleń</li>
+      <li>&#10003; Elastyczne godziny pracy</li>
+      <li>&#10003; Nowoczesny sprzęt komputerowy</li>
+      <li>&#10003; Przyjazna atmosfera w zespole</li>
+      <li>&#10003; Umowa o pracę lub B2B</li>
+    </ul>
+  </section>
+
+  <!-- FORMULARZ -->
+  <section id="formularz">
+    <h2>Formularz aplikacyjny</h2>
+    <div class="formularz-box">
+
+      <form id="myForm">
+        <label for="imie">Imię i nazwisko: *</label>
+        <input type="text" id="imie" name="imie" placeholder="np. Jan Kowalski" required>
+
+        <label for="email">Adres e-mail: *</label>
+        <input type="email" id="email" name="email" placeholder="np. jan@email.pl" required>
+
+        <label for="telefon">Numer telefonu:</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="np. 500 600 700">
+
+        <label for="stanowisko">Stanowisko: *</label>
+        <select id="stanowisko" name="stanowisko" required>
+          <option value="">-- wybierz --</option>
+          <option>Programista stron internetowych</option>
+          <option>Specjalista ds. sieci komputerowych</option>
+          <option>Administrator systemu Windows</option>
+          <option>Grafik komputerowy</option>
+          <option>Inne</option>
+        </select>
+
+        <label for="wiadomosc">Kilka słów o sobie: *</label>
+        <textarea id="wiadomosc" name="wiadomosc" placeholder="Napisz krótko o swoim doświadczeniu..." required></textarea>
+
+        <label for="cv">Załącz CV (PDF):</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+
+        <label style="font-weight: normal; display: flex; gap: 8px; align-items: flex-start; margin-bottom: 16px;">
+          <input type="checkbox" required style="width: auto; margin-top: 3px;">
+          <span style="font-size: 13px;">Wyrażam zgodę na przetwarzanie moich danych osobowych w celach rekrutacyjnych (RODO).</span>
+        </label>
+
+        <button type="submit">Wyślij aplikację</button>
+        <p class="info-wyslij">Zgłoszenie zostanie wysłane na adres: informatykcmg@gmail.com</p>
+      </form>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>FirmaTech Sp. z o.o. &nbsp;|&nbsp; ul. Technologiczna 5, 85-000 Bydgoszcz &nbsp;|&nbsp; informatykcmg@gmail.com</p>
+</footer>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    var imie = document.getElementById("imie").value;
+    var email = document.getElementById("email").value;
+    var telefon = document.getElementById("telefon").value;
+    var stanowisko = document.getElementById("stanowisko").value;
+    var wiadomosc = document.getElementById("wiadomosc").value;
+
+    var temat = "Aplikacja na stanowisko: " + stanowisko + " - " + imie;
+    var tresc = "Imię i nazwisko: " + imie + "\n"
+              + "E-mail: " + email + "\n"
+              + "Telefon: " + telefon + "\n"
+              + "Stanowisko: " + stanowisko + "\n\n"
+              + "O kandydacie:\n" + wiadomosc;
+
+    var link = "mailto:informatykcmg@gmail.com"
+             + "?subject=" + encodeURIComponent(temat)
+             + "&body=" + encodeURIComponent(tresc);
+
+    window.location.href = link;
+
+    alert("Dziękujemy! Twój klient pocztowy powinien się otworzyć z wypełnioną wiadomością. Wyślij ją, aby zakończyć aplikację.");
+  });
+</script>
+
+</body>
+</html>
