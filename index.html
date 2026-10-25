@@ -61,7 +61,7 @@
 
 <h2 id="formularz">Formularz</h2>
 
-<form action="https://formspree.io/f/TWOJ_KOD" method="POST">
+<form id="formularz">
 
   Imie i nazwisko:<br>
   <input type="text" name="imie"><br>
@@ -88,7 +88,34 @@
   <button type="submit">Wyslij</button>
 
 </form>
+<script>
+  var ADRES_EMAIL = 'vkubasitarz@gmail.com';
 
+  document.getElementById('formularz').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var status = document.getElementById('status');
+    var dane = new FormData(e.target);
+    dane.append('_subject', 'Nowe zgłoszenie rekrutacyjne');
+    status.textContent = 'Wysyłanie...';
+
+    try {
+      var odpowiedz = await fetch('https://formsubmit.co/ajax/' + ADRES_EMAIL, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: dane
+      });
+      var wynik = await odpowiedz.json();
+
+      if (wynik.success === 'true' || wynik.success === true) {
+        window.location.href = 'dziekujemy.html';
+      } else {
+        status.textContent = 'Błąd: ' + wynik.message;
+      }
+    } catch (blad) {
+      status.textContent = 'Nie udało się wysłać formularza. Spróbuj ponownie.';
+    }
+  });
+</script>
 <hr>
 <p>Kontakt: informatykcmg@gmail.com</p>
 
